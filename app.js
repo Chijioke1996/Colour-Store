@@ -11,6 +11,8 @@ addTocart.forEach((button) => {
         cart.classList.add("show")
         alert_circle.classList.add("show")
         alert_num.textContent = count
+        button.disabled = true //prevent the button from being clicked twice
+
 
     })
 })
