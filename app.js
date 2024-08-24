@@ -26,7 +26,7 @@ addTocart.forEach((button) => {
         // console.log(card);
 
          // Store card data in localStorage
-         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; //check if "cartItem" exist else create an array of it
          cartItems.push(cardData);
          localStorage.setItem('cartItems', JSON.stringify(cartItems));
         
@@ -50,3 +50,29 @@ document.addEventListener("DOMContentLoaded", () => {
 cart.addEventListener("click", () => {
     window.location.href = "/check-out.html"
 })
+
+
+
+//CHECK OUT PAGE JAVASCRIPT
+
+const parent_container = document.querySelector('.parent-container');
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Retrieve the cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    cartItems.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('colour-card');
+
+        card.innerHTML = `
+            <div class="colour-frame ${item.colorClass}"></div>
+            <p class="colour-class">${item.colourClassText}</p>
+            <p class="colour-name">${item.colourName}</p>
+            <p class="price">${item.price}</p>
+        `;
+
+        parent_container.appendChild(card);
+    });
+});
