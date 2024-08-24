@@ -4,106 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colour Store</title>
-    <link rel="stylesheet" href="/CSS/style.css">
-    <script src="app.js" defer></script>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <nav class="nav">
-                <ul class="ul">
-                    <li class="list">Home</li>
-                    <li class="list">Store</li>
-                    <li class="list">Team</li>
-                </ul>
-                <!-- Cart Icon -->
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="icon-img">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 
-                            12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125
-                             1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375
-                              0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                    </svg>
-                </div>
-                <!-- Alert Circle -->
-                <div class="alert-circle">
-                    <p class="alert-num"></p>
-                </div>
-            </nav>
-        </header>
-        <section class="section">
-
-            <!-- Parent Div For Color Cards -->
-            <div class="parent-container">
-                <div class="colour-card">
-                    <div class="colour-frame red"></div>
-                    <p class="colour-class">PRIMARY COLOR</p>
-                    <P class="colour-name">Red</P>
-                    <p class="price">$16.00</p>
-                    <button type="button">Add To Cart</button>
-                </div>
-
-                <div class="colour-card">
-                    <div class="colour-frame yellow"></div>
-                    <p class="colour-class">PRIMARY COLOR</p>
-                    <P class="colour-name">Yellow</P>
-                    <p class="price">$26.00</p>
-                    <button type="button">Add To Cart</button>
-                </div>
-
-                <div class="colour-card">
-                    <div class="colour-frame blue"></div>
-                    <p class="colour-class">PRIMARY COLOR</p>
-                    <P class="colour-name">Blue</P>
-                    <p class="price">$18.60</p>
-                    <button type="button">Add To Cart</button>
-                </div>
-
-                <div class="colour-card">
-                    <div class="colour-frame orange"></div>
-                    <p class="colour-class">SECONDARY COLOR</p>
-                    <P class="colour-name">Orange</P>
-                    <p class="price">$49.00</p>
-                    <button type="button">Add To Cart</button>
-                </div>
-
-                <div class="colour-card">
-                    <div class="colour-frame green"></div>
-                    <p class="colour-class">SECONDARY COLOR</p>
-                    <P class="colour-name">Green</P>
-                    <p class="price">$23.89</p>
-                    <button type="button">Add To Cart</button>
-                </div>
-
-                <div class="colour-card">
-                    <div class="colour-frame purple"></div>
-                    <p class="colour-class">SECONDARY COLOR</p>
-                    <P class="colour-name">Purple</P>
-                    <p class="price">$56.90</p>
-                    <button type="button">Add To Cart</button>
-                </div>
-
-                <div class="colour-card">
-                    <div class="colour-frame light-gray"></div>
-                    <p class="colour-class">GRAYSCALE</p>
-                    <P class="colour-name">Light Gray</P>
-                    <p class="price">$12.00</p>
-                    <button type="button">Add To Cart</button>
-                </div>
-
-                <div class="colour-card">
-                    <div class="colour-frame dark-gray"></div>
-                    <p class="colour-class">GRAYSCALE</p>
-                    <P class="colour-name">Dark Gray</P>
-                    <p class="price">$14.10</p>
-                    <button type="button">Add To Cart</button>
-                </div>
-
-            </div>
-        </section>
+    <div class="login-container">
+        <form class="login-form" action="index2.html" method="get">
+            <h2>Login</h2>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
 </body>
 

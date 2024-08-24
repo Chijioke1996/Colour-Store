@@ -5,6 +5,35 @@
     user-select: none;
 }
 
+/* Colour Palette */
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.orange {
+    background-color: orange;
+}
+.green {
+    background-color: green;
+}
+.purple {
+    background-color: purple;
+}
+.light-gray {
+    background-color: lightgray;
+}
+.dark-gray {
+    background-color: darkgray;
+}
+
+
+
 body {
     font-family: sans-serif;
     background-color: white;
@@ -12,7 +41,7 @@ body {
 
 .container {
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
     position: relative;
 }
 
@@ -80,7 +109,19 @@ body {
     align-items: center;
     justify-content: center;
     display: none;
+    animation: pop 0.3s ease-in-out;
 }
+
+/* alert-circle animation */
+@keyframes pop {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
+
+.alert-circle.show {
+    animation: pop 0.3s ease-in-out;
+}
+
 
 .alert-circle.show{
     display: flex;
@@ -91,67 +132,19 @@ body {
     font-size: 12px;
 }
 
+/* SECTION */
+
 .section {
-    margin: 3rem auto;
+    margin: 3.5rem 2.5rem;
+    position: relative;
 }
 
-
-/* CART CHECKOUT */
-
-.sum-cart {
-   position: relative; 
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.checkout-text {
-    text-align: center;
-    margin: 10px;
-}
-
-.cart-flex {
-    height: auto;
-    width: 70%;
-    border: 2px solid black;
-    border-radius: 25px;
-}
-
-
-/* IMPORTING CSS DATA */
-
-/* Colour Palette */
-.yellow {
-    background-color: yellow;
-}
-
-.red {
-    background-color: red;
-}
-.blue {
-    background-color: blue;
-}
-.orange {
-    background-color: orange;
-}
-.green {
-    background-color: green;
-}
-.purple {
-    background-color: purple;
-}
-.light-gray {
-    background-color: lightgray;
-}
-.dark-gray {
-    background-color: darkgray;
-}
+/* Parent Div */
 
 .parent-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 2rem;
-    margin: 2rem; /*Added margin */
 }
 
 .colour-card {
@@ -200,7 +193,13 @@ button:hover {
 }
 
 
+/* RESPONSIVE DESIGN */
 
+@media (max-width:500px) {
+    .colour-card {
+        width: 100%;
+    } 
+}
 
 
 
