@@ -15,6 +15,24 @@ addTocart.forEach((button) => {
         button.disabled = true //prevent the button from being clicked twice
 
 
+        const card = e.target.closest('.colour-card');
+        const cardData = {
+            colorClass: card.querySelector('.colour-frame').classList[1], // Get the color class (e.g., 'red', 'yellow')
+            colourClassText: card.querySelector('.colour-class').textContent,
+            colourName: card.querySelector('.colour-name').textContent,
+            price: card.querySelector('.price').textContent,
+        };
+
+        // console.log(card);
+
+         // Store card data in localStorage
+         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+         cartItems.push(cardData);
+         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        
+
+
+
     })
 })
 
