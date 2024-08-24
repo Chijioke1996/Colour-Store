@@ -109,7 +109,7 @@ body {
     align-items: center;
     justify-content: center;
     display: none;
-    animation: pop;
+    animation: pop 0.3s ease-in-out;
 }
 
 /* alert-circle animation */
