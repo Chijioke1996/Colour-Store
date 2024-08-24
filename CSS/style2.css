@@ -105,6 +105,11 @@ body {
    align-items: center;
 }
 
+.checkout-text {
+    text-align: center;
+    margin: 10px;
+}
+
 .cart-flex {
     height: auto;
     width: 70%;
