@@ -2,8 +2,27 @@ const addTocart = document.querySelectorAll("button")
 const alert_num = document.querySelector(".alert-num")
 const alert_circle = document.querySelector(".alert-circle")
 const cart = document.querySelector(".icon")
-
+const search = document.querySelector(".search")
+const colourCards = document.querySelectorAll('.colour-card')
 let count = 0
+
+//Search
+search.addEventListener("input", (e) => {
+    const typedInput = e.target.value.toLowerCase()
+
+    colourCards.forEach((card) => {
+        const colour_name = card.querySelector(".colour-name").textContent.toLocaleLowerCase() 
+        const colour_class = card.querySelector(".colour-class").textContent.toLocaleLowerCase() 
+
+         // Check if the search keyword is in the colour name or class
+         if (colour_name.includes(typedInput) || colour_class.includes(typedInput)) {
+            card.style.display = ''; // Show the card
+        } else {
+            card.style.display = 'none'; // Hide the card if it doesn't match
+        }
+    })
+
+})
 
 addTocart.forEach((button) => {
     button.addEventListener("click", (e) => {

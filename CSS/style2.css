@@ -139,6 +139,25 @@ body {
     position: relative;
 }
 
+/* Search Bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem;
+}
+
+.search {
+    width: 60%;
+    height: 45px;
+    padding: 15px;
+    border-radius: 25px;
+    border-right: 3px solid palevioletred;
+    border-top: 3px solid blue;
+    border-bottom: 3px solid #8e208e;
+    border-left: 3px solid olivedrab;
+    font-size: 19px;
+}
+
 /* Parent Div */
 
 .parent-container {
