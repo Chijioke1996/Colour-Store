@@ -214,7 +214,7 @@ button:hover {
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width:500px) {
+@media (max-width:760px) {
     .colour-card {
         width: 100%;
     } 
