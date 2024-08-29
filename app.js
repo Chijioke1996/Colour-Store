@@ -29,7 +29,7 @@ search.addEventListener("input", (e) => {
 addTocart.forEach((button) => {
     button.addEventListener("click", (e) => {
         count++
-        localStorage.setItem('cartCount', count)
+        sessionStorage.setItem('cartCount', count)
         cart.classList.add("show")
         alert_circle.classList.add("show")
         alert_num.textContent = count
@@ -47,15 +47,15 @@ addTocart.forEach((button) => {
 
 
         // Store card data in localStorage
-        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; //check if "cartItem" exist else create an array of it
+        let cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || []; //check if "cartItem" exist else create an array of it
         cartItems.push(cardData);
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
 
 
         // CALCULATIONS OF PRICE AND STORING
-        let price_summary = JSON.parse(localStorage.getItem("storedPrice")) || []
+        let price_summary = JSON.parse(sessionStorage.getItem("storedPrice")) || []
         price_summary.push(cardData.price)
-        localStorage.setItem("storedPrice", JSON.stringify(price_summary))
+        sessionStorage.setItem("storedPrice", JSON.stringify(price_summary))
 
 
         // Calculate and log the total price
@@ -68,7 +68,7 @@ addTocart.forEach((button) => {
 
 // Retrieve the count from localStorage on page load
 document.addEventListener("DOMContentLoaded", () => {
-    const savedCount = localStorage.getItem('cartCount');
+    const savedCount = sessionStorage.getItem('cartCount');
     if (savedCount) {
         count = parseInt(savedCount);
         cart.classList.add("show");

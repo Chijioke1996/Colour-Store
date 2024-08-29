@@ -5,7 +5,7 @@ const parent_container = document.querySelector('.parent-container');
 document.addEventListener("DOMContentLoaded", () => {
 
     // Retrieve the cart items from localStorage
-    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    let cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
 
     if (cartItems) {
         cartItems.forEach(item => {
